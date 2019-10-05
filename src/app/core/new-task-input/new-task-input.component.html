@@ -1,2 +1,9 @@
-<input placeholder="Add new task" />
-<button>Add task</button>
+<mat-form-field>
+  <input
+    matInput
+    #inputRef
+    (keyup.enter)="submitValue($event.target.value)"
+    placeholder="Add new task"
+  />
+</mat-form-field>
+<button type="button" (click)="submitValue(inputRef.value)">Add task</button>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-existing-task",
@@ -11,4 +11,8 @@ export class ExistingTaskComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  addItem(task: string) {
+    this.todoList.push({ name: task });
+  }
 }
